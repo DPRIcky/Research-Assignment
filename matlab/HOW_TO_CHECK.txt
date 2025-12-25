@@ -1,0 +1,199 @@
+=============================================================================
+GUIDE: HOW TO CHECK THE NEW UPDATES
+=============================================================================
+
+WHAT WAS ADDED:
+---------------
+✓ 3 New utility functions (compute_metrics, plot_simulation_results, save_results)
+✓ 4 Documentation files (README, FILE_MANIFEST, LICENSE, CHECKLIST)
+✓ 1 Test script (test_new_utilities)
+
+=============================================================================
+OPTION 1: QUICK CHECK (View files in terminal)
+=============================================================================
+
+1. List all new files:
+   -------------------
+   cd matlab
+   ls -lh *.md LICENSE
+   ls -lh utils/{compute_metrics,plot_simulation_results,save_results}.m
+
+2. Read documentation:
+   -------------------
+   cat README.md | less           # Press 'q' to exit
+   cat FILE_MANIFEST.md | less    # Complete file listing
+   cat MATLAB_CHECKLIST.md        # Requirements checklist
+   cat LICENSE                    # MIT License
+
+3. Quick preview of new functions:
+   -------------------------------
+   head -30 utils/compute_metrics.m
+   head -30 utils/plot_simulation_results.m
+   head -30 utils/save_results.m
+
+=============================================================================
+OPTION 2: OPEN IN TEXT EDITOR
+=============================================================================
+
+   # Use your preferred editor:
+   code README.md                 # VS Code
+   gedit README.md                # gedit
+   nano README.md                 # nano
+   
+   # Or open all documentation:
+   code *.md LICENSE
+
+=============================================================================
+OPTION 3: TEST THE NEW UTILITIES (Recommended!)
+=============================================================================
+
+1. Run the test script:
+   --------------------
+   cd matlab
+   matlab -nodisplay -r "test_new_utilities; exit"
+   
+   # Or in MATLAB GUI:
+   >> cd matlab
+   >> test_new_utilities
+
+2. What the test does:
+   -------------------
+   ✓ Creates sample trajectory data
+   ✓ Tests compute_metrics() function
+   ✓ Tests plot_simulation_results() function
+   ✓ Tests save_results() function
+   ✓ Generates output in results/ folder
+
+3. Check the generated outputs:
+   ----------------------------
+   ls -lh results/test_utilities*
+   cat results/test_utilities_config.txt
+   head results/test_utilities_metrics.csv
+
+=============================================================================
+OPTION 4: USE IN ACTUAL SIMULATION
+=============================================================================
+
+The new utilities are ALREADY INTEGRATED into main_simulation.m!
+
+1. Run main simulation:
+   --------------------
+   matlab -nodisplay -r "main_simulation; exit"
+   
+2. The simulation now automatically:
+   ---------------------------------
+   ✓ Uses compute_metrics() internally
+   ✓ Can use plot_simulation_results() for better plots
+   ✓ Can save results with save_results()
+
+=============================================================================
+VERIFY FILE STRUCTURE:
+=============================================================================
+
+Expected directory structure:
+
+matlab/
+├── core/                          (2 files)
+│   ├── Environment.m
+│   └── VehicleDynamics.m
+├── planners/                      (3 files)
+│   ├── AStarPlanner.m
+│   ├── RRTStarPlanner.m
+│   └── HybridAStarPlanner.m
+├── controllers/                   (3 files)
+│   ├── PIDController.m
+│   ├── LQRController.m
+│   └── MPCController.m
+├── safety/                        (1 file)
+│   └── CBFSafetyFilter.m
+├── utils/                         (7 files) ← 3 NEW!
+│   ├── StateEstimator.m
+│   ├── EKFEstimator.m
+│   ├── UKFEstimator.m
+│   ├── ParticleFilter.m
+│   ├── compute_metrics.m          ← NEW!
+│   ├── plot_simulation_results.m  ← NEW!
+│   └── save_results.m             ← NEW!
+├── results/                       (auto-created)
+├── main_simulation.m
+├── test_new_utilities.m           ← NEW!
+├── test_*.m                       (9 test files)
+├── README.md                      ← NEW!
+├── FILE_MANIFEST.md               ← NEW!
+├── MATLAB_CHECKLIST.md            ← NEW!
+└── LICENSE                        ← NEW!
+
+To verify:
+   find . -name "*.m" | wc -l      # Should show 28 files
+   ls *.md LICENSE | wc -l         # Should show 4 files
+
+=============================================================================
+WHAT EACH NEW FILE DOES:
+=============================================================================
+
+1. compute_metrics.m
+   ------------------
+   Purpose: Calculate 30+ performance metrics
+   Input: Trajectory, path, controls, timestamps, CBF data
+   Output: Metrics struct with planning/control/safety metrics
+   
+2. plot_simulation_results.m
+   --------------------------
+   Purpose: Generate comprehensive 6-panel visualization
+   Input: Environment, trajectories, controls, errors, config
+   Output: Figure with trajectory, errors, controls, safety plots
+   
+3. save_results.m
+   --------------
+   Purpose: Export results to multiple formats
+   Input: Metrics, trajectory, controls, config, filename
+   Output: Creates .mat, .csv, .txt files in results/
+   
+4. README.md
+   ---------
+   Complete documentation with:
+   - Installation instructions
+   - Quick start guide
+   - Component descriptions
+   - Examples and troubleshooting
+   
+5. FILE_MANIFEST.md
+   ----------------
+   Detailed file listing with:
+   - Every file's purpose
+   - Inputs and outputs
+   - Dependencies
+   - Data flow diagrams
+   
+6. LICENSE
+   -------
+   MIT License for open-source distribution
+   
+7. MATLAB_CHECKLIST.md
+   -------------------
+   Verification checklist showing all PDF requirements are met
+
+=============================================================================
+QUICK COMMANDS CHEAT SHEET:
+=============================================================================
+
+# View documentation
+cat README.md
+cat MATLAB_CHECKLIST.md
+
+# Test new utilities
+matlab -nodisplay -r "test_new_utilities; exit"
+
+# Run full simulation
+matlab -nodisplay -r "main_simulation; exit"
+
+# Check generated results
+ls -lh results/
+
+# Count files
+find . -name "*.m" | wc -l
+
+# View function help
+matlab -nodisplay -r "help compute_metrics; exit"
+
+=============================================================================

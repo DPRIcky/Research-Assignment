@@ -1,0 +1,45 @@
+# MATLAB
+*.asv
+*.m~
+*.mat
+*.fig
+*.slx.autosave
+*.slxc
+slprj/
+
+# ROS2 build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Test results
+ros2_ws/test_results/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Results (optional - comment out if you want to track results)
+# results/
+
+# Logs
+*.log

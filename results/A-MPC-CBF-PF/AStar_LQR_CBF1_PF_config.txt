@@ -1,0 +1,11 @@
+Simulation Configuration
+========================
+
+planner_name: A*
+controller_name: LQR
+cbf_enabled: 1.0000
+estimator_name: PF
+start_pos: [5.0000 5.0000 0.0000]
+goal_pos: [45.0000 45.0000  0.7854]
+dt: 0.1000
+vehicle_wheelbase: 2.5000
