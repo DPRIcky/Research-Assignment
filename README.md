@@ -427,6 +427,12 @@ estimator = 1;
 run('run_simulation.m');
 ```
 
+## Demo Videos
+
+### Video 1: Planning Algorithm Comparison
+https://github.com/DPRIcky/Research-Assignment/figures/shortened - Made with Clipchamp.mp4
+
+
 ## 🐛 Troubleshooting
 
 ### "Path planning failed"
