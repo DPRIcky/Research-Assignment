@@ -1,0 +1,3 @@
+CBF_State,min_obstacle_distance,mean_obstacle_distance,safety_violations,safety_maintained,mean_tracking_error,mean_velocity_change,cbf_activation_count,cbf_activation_rate,cbf_duration
+CBF OFF,0.0000 ± 0.0000,0.0000 ± 0.0000,0.0000 ± 0.0000,1.0000 ± 0.0000,0.9608 ± 0.5777,0.4150 ± 0.4460,0.0000 ± 0.0000,0.0000 ± 0.0000,0.0000 ± 0.0000
+CBF ON,0.5422 ± 0.7045,4.8794 ± 2.7393,147.8333 ± 343.2809,0.7500 ± 0.4523,0.9331 ± 0.4162,2.6842 ± 4.8642,330.7500 ± 402.2426,42.0154 ± 34.5574,33.0750 ± 40.2243
