@@ -430,7 +430,7 @@ run('run_simulation.m');
 ## Demo Videos
 
 ### Video 1: Planning Algorithm Comparison
-https://github.com/DPRIcky/Research-Assignment/figures/shortened - Made with Clipchamp.mp4
+https://github.com/DPRIcky/Research-Assignment/figures/shortened
 
 
 ## 🐛 Troubleshooting
